@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.1'
+version '0.0.1'
 
 sourceCompatibility = 1.8
 

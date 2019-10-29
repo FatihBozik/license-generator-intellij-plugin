@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
  * {@link ResourceBundle}/localization utils for the plugin.
  *
  * @author Fatih Bozik <bozikfatih@gmail.com>
- * @since 0.1
+ * @since 0.0.1
  */
 public class LicenceGeneratorBundle {
     private static final String BUNDLE_NAME = "messages.LicenceGeneratorBundle";
