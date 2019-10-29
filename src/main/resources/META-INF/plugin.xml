@@ -14,6 +14,8 @@
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <action id="Licence.New" class="io.github.fatihbozik.licencegenerator.actions.NewFileGroupAction">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>

@@ -9,3 +9,4 @@ indent_style = space
 
 [*.java]
 tab_width = 8
+ij_java_doc_do_not_wrap_if_one_line = true
