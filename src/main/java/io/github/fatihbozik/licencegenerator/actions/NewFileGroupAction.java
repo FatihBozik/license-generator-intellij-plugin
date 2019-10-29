@@ -3,7 +3,7 @@ package io.github.fatihbozik.licencegenerator.actions;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.DumbAware;
-import io.github.fatihbozik.licencegenerator.Licence;
+import io.github.fatihbozik.licencegenerator.file.Licence;
 import io.github.fatihbozik.licencegenerator.LicenceGeneratorBundle;
 import io.github.fatihbozik.licencegenerator.util.Icons;
 

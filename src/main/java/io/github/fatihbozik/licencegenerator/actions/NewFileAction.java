@@ -4,7 +4,7 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.DumbAware;
-import io.github.fatihbozik.licencegenerator.Licence;
+import io.github.fatihbozik.licencegenerator.file.Licence;
 import org.jetbrains.annotations.NotNull;
 
 import static io.github.fatihbozik.licencegenerator.LicenceGeneratorBundle.message;
