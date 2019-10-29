@@ -1,0 +1,9 @@
+# IntelliJ
+.idea
+
+# Gradle
+.gradle
+/build/
+
+# Miscellaneous
+.DS_Store

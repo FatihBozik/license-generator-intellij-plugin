@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>io.github.fatihbozik.intellij-licence-generator</id>
+    <name>Licence Generator</name>
+    <vendor email="bozikfatih@gmail.com" url="https://fatihbozik.github.io">Fatih Bozik</vendor>
+
+    <description><![CDATA[
+    Open Source Licence generator plugin for IntelliJ Idea
+    ]]></description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

@@ -1,0 +1,3 @@
+= IntelliJ Licence Generator
+
+**intellij-licence-generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
