@@ -1,5 +1,6 @@
 plugins {
     id 'org.jetbrains.intellij' version '0.4.10'
+    id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
@@ -23,4 +24,8 @@ patchPluginXml {
     changeNotes """
       Add change notes here.<br>
       <em>most HTML tags may be used</em>"""
+}
+
+checkstyle {
+    toolVersion '8.26'
 }
