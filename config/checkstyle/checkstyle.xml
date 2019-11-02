@@ -8,9 +8,12 @@
     <property name="fileExtensions" value="java, properties, xml"/>
     <property name="severity" value="error"/>
 
-    <!-- Whitespace -->
-    <module name="FileTabCharacter"/>
-    <module name="NewlineAtEndOfFile"/>
+    <!-- Headers -->
+    <module name="RegexpHeader">
+        <property name="header"
+                  value="^/*\n * MIT License\n \*\n \* Copyright \(c\) \d{4} Fatih Bozik"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
 
     <!-- Miscellaneous -->
     <module name="OrderedProperties"/>
@@ -25,6 +28,13 @@
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
     </module>
 
+    <!-- Whitespace -->
+    <module name="FileTabCharacter"/>
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- The TreeWalker module creates a syntax tree for a Java source file
+          and invokes its submodules, called Checks, during a walk, or
+          traversal, of the nodes of the tree. -->
     <module name="TreeWalker">
         <!-- Block Checks -->
         <module name="AvoidNestedBlocks"/>
