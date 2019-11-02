@@ -29,3 +29,5 @@ patchPluginXml {
 checkstyle {
     toolVersion '8.26'
 }
+
+checkstyleMain.source = sourceSets.main.allSource

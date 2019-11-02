@@ -28,9 +28,9 @@ public class NewFileAction extends AnAction implements DumbAware {
 
     }
 
-    private void createPresentation(@NotNull Licence licence) {
+    private void createPresentation(@NotNull Licence aLicence) {
         final Presentation templatePresentation = getTemplatePresentation();
-        templatePresentation.setText(licence.getName());
+        templatePresentation.setText(aLicence.getName());
         templatePresentation.setDescription(message("action.newFile.description", licence.getName()));
     }
 }

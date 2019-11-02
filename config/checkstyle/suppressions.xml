@@ -3,6 +3,6 @@
     "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
     "https://checkstyle.org/dtds/suppressions_1_2.dtd">
 <suppressions>
-
-
+    <!-- Suppress MagicNumber checks in all unit tests -->
+    <suppress checks="MagicNumber" files="[\\/]test[\\/].*[\\/]"/>
 </suppressions>

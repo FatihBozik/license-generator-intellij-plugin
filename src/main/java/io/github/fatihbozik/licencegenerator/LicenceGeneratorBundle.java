@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  * @author Fatih Bozik <bozikfatih@gmail.com>
  * @since 0.0.1
  */
-public class LicenceGeneratorBundle {
+public final class LicenceGeneratorBundle {
     /** The {@link ResourceBundle} path. */
     @NonNls
     private static final String BUNDLE_NAME = "messages.LicenceGeneratorBundle";
