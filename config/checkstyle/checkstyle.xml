@@ -8,13 +8,6 @@
     <property name="fileExtensions" value="java, properties, xml"/>
     <property name="severity" value="error"/>
 
-    <!-- Headers -->
-    <module name="RegexpHeader">
-        <property name="header"
-                  value="^/*\n * MIT License\n \*\n \* Copyright \(c\) \d{4} Fatih Bozik"/>
-        <property name="fileExtensions" value="java"/>
-    </module>
-
     <!-- Miscellaneous -->
     <module name="OrderedProperties"/>
     <module name="Translation"/>
