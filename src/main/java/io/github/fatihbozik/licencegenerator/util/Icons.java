@@ -8,7 +8,6 @@ import javax.swing.Icon;
  * {@link Icons} class that holds icon resources.
  *
  * @author Fatih Bozik <bozikfatih@gmail.com>
- * @since 0.0.1
  */
 public final class Icons {
     /** General ignore icon. */

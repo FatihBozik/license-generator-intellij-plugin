@@ -4,7 +4,7 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.DumbAware;
 import io.github.fatihbozik.licencegenerator.LicenceGeneratorBundle;
-import io.github.fatihbozik.licencegenerator.file.LicenceType;
+import io.github.fatihbozik.licencegenerator.licence.LicenceType;
 import io.github.fatihbozik.licencegenerator.util.Icons;
 
 import java.util.Arrays;
@@ -12,8 +12,7 @@ import java.util.Arrays;
 /**
  * Creates a group of {@link NewLicenceFileAction} instances.
  *
- * @author Fatih Bozik <bozikfatih@gmail.com>
- * @since 0.0.1
+ * @author Fatih Bozik
  */
 public class NewLicenceFileGroupAction extends DefaultActionGroup implements DumbAware {
 

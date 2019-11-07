@@ -10,8 +10,7 @@ import java.util.ResourceBundle;
 /**
  * {@link ResourceBundle}/localization utils for the plugin.
  *
- * @author Fatih Bozik <bozikfatih@gmail.com>
- * @since 0.0.1
+ * @author Fatih Bozik
  */
 public final class LicenceGeneratorBundle {
     /** The {@link ResourceBundle} path. */
