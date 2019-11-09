@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.1'
+version '0.0.2'
 
 sourceCompatibility = 1.8
 
@@ -22,7 +22,9 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      First Release
+      Licence Generator is an IntelliJ Idea plugin 
+      that allows you to easily add one of your
+      open source licenses to your project.
       """
 }
 
