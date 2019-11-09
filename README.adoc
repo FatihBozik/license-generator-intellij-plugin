@@ -1,14 +1,79 @@
 = Licence Generator IntelliJ Plugin
 
-**licence-generator-intellij-plugin** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
+// Attributes
+:imagesdir: src/main/resources/images
+
+== Introduction
+
+**licence-generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
+
+It supports following Jetbrains IDEs:
+
+* Android Studio, CLion, DataGrip, GoLand, IntelliJ IDEA Ultimate, IntelliJ IDEA Community, IntelliJ IDEA Educational, MPS, AppCode, PhpStorm, PyCharm Professional, PyCharm Community, PyCharm Educational, Rider, RubyMine, WebStorm
+
+Supported licences:
+
+* Apache Licence 2.0, GNU General Public License v3.0, MIT Licence
+
+== Installation
+
+* Using IDE built-in plugin system:
+
+- `Preferences` > `Plugins` > `Marketplace` > `Search for "Licence Generator"` > `Install Plugin`
+- Restart IDE.
+
+* Manually:
+
+- Download the https://github.com/FatihBozik/licence-generator-intellij-plugin/releases/latest[latest release] and install it manually using `Preferences` > `Plugins` > `Install plugin from disk...`
+- Restart IDE.
 
 == Usage
 
-image::src/main/resources/preview.gif[scaledwidth=30%]
+In the *Project* view, right-click a source directory where you want to create the license file and choose *New | Licence File | MIT Licence* from the context menu.
 
-== Contributions
+image::preview.png[scaledwidth=30%]
 
-To run the CheckStyle validations you'll need to run
+== Changelog
+
+// tag::compact[]
+=== 1.0.0 (2019-11-09)
+
+First release
+// end::compact[]
+
+== Contribution
+
+=== License Agreement
+
+By contributing changes to this repository, you agree to license your contributions under the MIT license.
+This ensures your contributions have the same license as the project and that the community is free to use your contributions.
+You also assert that you are the original author of the work that you are contributing unless otherwise stated.
+
+=== Local Build
+
+This plugin is built using Gradle.
+If you build or run it the first time it will download the community edition of IntelliJ automatically.
+You don’t need to install Gradle, you just need to install Java and make it available in the path.
+
+To build this plugin, you need to run:
+
+[source,bash]
+----
+./gradlew buildPlugin
+----
+
+The ZIP file with plugin to distribute will be located in `build/distributions`.
+
+=== Running the development version locally
+
+To run the plugin for development you’ll need to start
+
+[source,bash]
+----
+./gradlew runIde
+----
+
+To run all tests and the CheckStyle validations you’ll need to start
 
 [source,bash]
 ----
