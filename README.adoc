@@ -3,6 +3,16 @@
 // Attributes
 :imagesdir: src/main/resources/images
 
+:licence-badge: https://img.shields.io/github/license/fatihbozik/licence-generator-intellij-plugin
+:licence-file: https://github.com/FatihBozik/licence-generator-intellij-plugin/blob/master/LICENCE.adoc
+
+:version-badge: https://img.shields.io/jetbrains/plugin/v/13305-licence-generator
+:plugin-page: https://plugins.jetbrains.com/plugin/13305-licence-generator/
+
+image:{licence-badge}[Licence, {licence-file}]
+
+image:{version-badge}[Version, link={plugin-page}]
+
 == Introduction
 
 **licence-generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
