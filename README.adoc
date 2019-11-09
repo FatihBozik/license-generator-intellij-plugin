@@ -9,6 +9,8 @@
 :version-badge: https://img.shields.io/jetbrains/plugin/v/13305-licence-generator
 :plugin-page: https://plugins.jetbrains.com/plugin/13305-licence-generator/
 
+:github-release: https://github.com/FatihBozik/licence-generator-intellij-plugin/releases/tag/
+
 image:{licence-badge}[Licence, {licence-file}]
 
 image:{version-badge}[Version, link={plugin-page}]
@@ -46,7 +48,7 @@ image::preview.png[scaledwidth=30%]
 == Changelog
 
 // tag::compact[]
-=== 0.0.2 (2019-11-09)
+=== {github-release}v0.0.2[0.0.2] (2019-11-09)
 
 First release
 // end::compact[]
