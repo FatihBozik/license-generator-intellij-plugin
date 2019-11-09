@@ -36,7 +36,7 @@ image::preview.png[scaledwidth=30%]
 == Changelog
 
 // tag::compact[]
-=== 1.0.0 (2019-11-09)
+=== 0.0.1 (2019-11-09)
 
 First release
 // end::compact[]
