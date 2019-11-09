@@ -21,9 +21,9 @@ public abstract class AbstractCommandAction<T> {
         this.project = project;
     }
 
-    protected abstract T compute() throws Throwable;
+    protected abstract T compute();
 
-    public final T execute() throws Throwable {
+    public final T execute() {
         return WriteCommandAction.writeCommandAction(project).compute(AbstractCommandAction.this::compute);
     }
 }

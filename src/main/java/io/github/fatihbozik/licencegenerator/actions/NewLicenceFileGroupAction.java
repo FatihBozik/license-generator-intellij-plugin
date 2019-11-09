@@ -24,7 +24,7 @@ public class NewLicenceFileGroupAction extends DefaultActionGroup implements Dum
 
     private void createPresentation() {
         Presentation presentation = getTemplatePresentation();
-        presentation.setText(LicenceGeneratorBundle.message("action.newFile.group"));
+        presentation.setText(LicenceGeneratorBundle.message("action.licenceFile.group"));
         presentation.setIcon(Icons.LICENCE);
     }
 }

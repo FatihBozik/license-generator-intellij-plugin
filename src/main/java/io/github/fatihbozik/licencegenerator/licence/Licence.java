@@ -32,4 +32,9 @@ public class Licence {
     String getContent() {
         return content;
     }
+
+    @NotNull
+    LicenceType getType() {
+        return type;
+    }
 }

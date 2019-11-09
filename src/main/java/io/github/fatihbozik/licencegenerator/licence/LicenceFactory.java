@@ -8,8 +8,11 @@ import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiFileFactory;
 import com.intellij.util.IncorrectOperationException;
+import io.github.fatihbozik.licencegenerator.util.Constants;
 import io.github.fatihbozik.licencegenerator.util.Resources;
 import org.jetbrains.annotations.Nullable;
+
+import java.time.Year;
 
 /**
  * Licences factory that generates licence file and its content.
@@ -17,8 +20,6 @@ import org.jetbrains.annotations.Nullable;
  * @author Fatih Bozik
  */
 public class LicenceFactory implements FileTemplateGroupDescriptorFactory {
-    /** Licence file name **/
-    private static final String LICENCE_FILE_NAME = "LICENCE";
 
     /** Current licence type. */
     private final LicenceType licenceType;
@@ -49,8 +50,21 @@ public class LicenceFactory implements FileTemplateGroupDescriptorFactory {
         final PsiFileFactory factory = PsiFileFactory.getInstance(directory.getProject());
 
         final Licence licence = Resources.getLicence(licenceType);
-        final String content = StringUtil.defaultIfBlank(licence.getContent(), "");
-        final PsiFile file = factory.createFileFromText(LICENCE_FILE_NAME, UnknownFileType.INSTANCE, content);
+        String content = StringUtil.defaultIfBlank(licence.getContent(), "");
+
+        if (licence.getType() == LicenceType.MIT) {
+            content = replaceParametricValues(content);
+        }
+
+        final PsiFile file = factory.createFileFromText(Constants.LICENCE, UnknownFileType.INSTANCE, content);
         return (PsiFile) directory.add(file);
+    }
+
+    private String replaceParametricValues(String content) {
+        final int year = Year.now().getValue();
+        content = content.replace("[year]", String.valueOf(year));
+        final String userName = System.getProperty("user.name");
+        content = content.replace("[fullname]", userName);
+        return content;
     }
 }

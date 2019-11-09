@@ -43,7 +43,7 @@ public class CreateFileCommandAction extends AbstractCommandAction<PsiFile> {
      */
     @Override
     protected PsiFile compute() {
-        LicenceFactory factory = new LicenceFactory(licenceType);
+        final LicenceFactory factory = new LicenceFactory(licenceType);
         return factory.createFromTemplate(directory);
     }
 }

@@ -1,14 +1,19 @@
 package io.github.fatihbozik.licencegenerator.actions;
 
 import com.intellij.ide.IdeView;
+import com.intellij.notification.Notification;
+import com.intellij.notification.NotificationType;
+import com.intellij.notification.Notifications;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
 import io.github.fatihbozik.licencegenerator.LicenceGeneratorBundle;
 import io.github.fatihbozik.licencegenerator.command.CreateFileCommandAction;
 import io.github.fatihbozik.licencegenerator.licence.LicenceType;
+import io.github.fatihbozik.licencegenerator.util.Constants;
 import io.github.fatihbozik.licencegenerator.util.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -33,13 +38,35 @@ public class NewLicenceFileAction extends AnAction implements DumbAware {
         if (directory == null) {
             return;
         }
-        try {
-            final CreateFileCommandAction createFileCommandAction = new CreateFileCommandAction(project, directory, licenceType);
-            final PsiFile file = createFileCommandAction.execute();
-            Utils.openFile(project, file);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+
+        final PsiFile file = directory.findFile(Constants.LICENCE);
+        final VirtualFile virtualFile = getVirtualFile(directory, file);
+
+        if (file == null && virtualFile == null) {
+            final PsiFile createdFile = createFile(project, directory);
+            if (createdFile != null) {
+                Utils.openFile(project, createdFile);
+            }
+        } else {
+            Notifications.Bus.notify(new Notification(
+                "Licence File Detector",
+                LicenceGeneratorBundle.message("action.licenceFile.exists"),
+                LicenceGeneratorBundle.message("action.licenceFile.exists.in", virtualFile.getPath()),
+                NotificationType.INFORMATION
+            ), project);
         }
+    }
+
+    private PsiFile createFile(Project project, PsiDirectory directory) {
+        final CreateFileCommandAction createFileCommandAction = new CreateFileCommandAction(project, directory, licenceType);
+        return createFileCommandAction.execute();
+    }
+
+    private VirtualFile getVirtualFile(PsiDirectory directory, PsiFile file) {
+        if (file == null) {
+            return directory.getVirtualFile().findChild(Constants.LICENCE);
+        }
+        return file.getVirtualFile();
     }
 
     private void createPresentation(@NotNull LicenceType licenceType) {
@@ -49,6 +76,6 @@ public class NewLicenceFileAction extends AnAction implements DumbAware {
     }
 
     private String getLicenceTypeDescription(@NotNull LicenceType licenceType) {
-        return LicenceGeneratorBundle.message("action.newFile.description", licenceType.getName());
+        return LicenceGeneratorBundle.message("action.licenceFile.description", licenceType.getName());
     }
 }
