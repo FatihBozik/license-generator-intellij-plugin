@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @author Fatih Bozik
  */
-public class CreateFileCommandAction extends CommandAction<PsiFile> {
+public class CreateFileCommandAction extends AbstractCommandAction<PsiFile> {
     /** Working directory. */
     private final PsiDirectory directory;
 
@@ -36,7 +36,7 @@ public class CreateFileCommandAction extends CommandAction<PsiFile> {
 
     /**
      * Creates a new file using
-     * {@link io.github.fatihbozik.licencegenerator.licence.LicenceFactory#createFromTemplate(PsiDirectory)}
+     * {@link LicenceFactory#createFromTemplate(PsiDirectory)}
      * to fill it with content.
      *
      * @return created file

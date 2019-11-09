@@ -7,7 +7,7 @@ import javax.swing.Icon;
 /**
  * {@link Icons} class that holds icon resources.
  *
- * @author Fatih Bozik <bozikfatih@gmail.com>
+ * @author Fatih Bozik
  */
 public final class Icons {
     /** General ignore icon. */

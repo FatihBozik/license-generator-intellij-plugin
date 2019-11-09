@@ -1,6 +1,6 @@
-= IntelliJ Licence Generator
+= Licence Generator IntelliJ Plugin
 
-**intellij-licence-generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
+**licence-generator-intellij-plugin** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
 
 To run the CheckStyle validations you'll need to run
 

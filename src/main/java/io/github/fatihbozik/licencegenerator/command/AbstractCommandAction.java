@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * @author Fatih Bozik
  */
-public abstract class CommandAction<T> {
+public abstract class AbstractCommandAction<T> {
     /** Current project. */
     @NotNull
     private final Project project;
@@ -17,13 +17,13 @@ public abstract class CommandAction<T> {
      *
      * @param project current project
      */
-    public CommandAction(@NotNull Project project) {
+    AbstractCommandAction(@NotNull Project project) {
         this.project = project;
     }
 
     protected abstract T compute() throws Throwable;
 
     public final T execute() throws Throwable {
-        return WriteCommandAction.writeCommandAction(project).compute(CommandAction.this::compute);
+        return WriteCommandAction.writeCommandAction(project).compute(AbstractCommandAction.this::compute);
     }
 }

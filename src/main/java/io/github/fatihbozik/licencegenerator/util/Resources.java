@@ -23,7 +23,6 @@ public final class Resources {
     @NonNls
     private static final String LICENCES = "/licences/";
 
-
     /** Private constructor to prevent creating {@link Resources} instance. */
     private Resources() {
     }
