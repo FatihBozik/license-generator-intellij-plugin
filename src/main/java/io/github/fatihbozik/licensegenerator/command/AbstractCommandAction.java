@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.command;
+package io.github.fatihbozik.licensegenerator.command;
 
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.project.Project;

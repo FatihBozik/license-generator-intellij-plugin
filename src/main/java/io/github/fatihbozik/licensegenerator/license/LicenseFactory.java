@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.licence;
+package io.github.fatihbozik.licensegenerator.license;
 
 import com.github.hypfvieh.util.StringUtil;
 import com.intellij.ide.fileTemplates.FileTemplateGroupDescriptor;
@@ -8,25 +8,25 @@ import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiFileFactory;
 import com.intellij.util.IncorrectOperationException;
-import io.github.fatihbozik.licencegenerator.util.Constants;
-import io.github.fatihbozik.licencegenerator.util.Resources;
+import io.github.fatihbozik.licensegenerator.util.Constants;
+import io.github.fatihbozik.licensegenerator.util.Resources;
 import org.jetbrains.annotations.Nullable;
 
 import java.time.Year;
 
 /**
- * Licences factory that generates licence file and its content.
+ * Licenses factory that generates license file and its content.
  *
  * @author Fatih Bozik
  */
-public class LicenceFactory implements FileTemplateGroupDescriptorFactory {
+public class LicenseFactory implements FileTemplateGroupDescriptorFactory {
 
-    /** Current licence type. */
-    private final LicenceType licenceType;
+    /** Current license type. */
+    private final LicenseType licenseType;
 
-    /** Builds a new instance of {@link LicenceFactory}. */
-    public LicenceFactory(LicenceType licenceType) {
-        this.licenceType = licenceType;
+    /** Builds a new instance of {@link LicenseFactory}. */
+    public LicenseFactory(LicenseType licenseType) {
+        this.licenseType = licenseType;
     }
 
     @Override
@@ -35,28 +35,28 @@ public class LicenceFactory implements FileTemplateGroupDescriptorFactory {
     }
 
     /**
-     * Creates new licence file
+     * Creates new license file
      *
      * @param directory working directory
      * @return file
      */
     @Nullable
     public PsiFile createFromTemplate(final PsiDirectory directory) throws IncorrectOperationException {
-        final String filename = licenceType.getKey();
+        final String filename = licenseType.getKey();
         final PsiFile currentFile = directory.findFile(filename);
         if (currentFile != null) {
             return currentFile;
         }
         final PsiFileFactory factory = PsiFileFactory.getInstance(directory.getProject());
 
-        final Licence licence = Resources.getLicence(licenceType);
-        String content = StringUtil.defaultIfBlank(licence.getContent(), "");
+        final License license = Resources.getLicense(licenseType);
+        String content = StringUtil.defaultIfBlank(license.getContent(), "");
 
-        if (licence.getType() == LicenceType.MIT) {
+        if (license.getType() == LicenseType.MIT) {
             content = replaceParametricValues(content);
         }
 
-        final PsiFile file = factory.createFileFromText(Constants.LICENCE, UnknownFileType.INSTANCE, content);
+        final PsiFile file = factory.createFileFromText(Constants.LICENSE, UnknownFileType.INSTANCE, content);
         return (PsiFile) directory.add(file);
     }
 

@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.actions;
+package io.github.fatihbozik.licensegenerator.actions;
 
 import com.intellij.ide.IdeView;
 import com.intellij.notification.Notification;
@@ -10,24 +10,24 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
-import io.github.fatihbozik.licencegenerator.LicenceGeneratorBundle;
-import io.github.fatihbozik.licencegenerator.command.CreateFileCommandAction;
-import io.github.fatihbozik.licencegenerator.licence.LicenceType;
-import io.github.fatihbozik.licencegenerator.util.Constants;
-import io.github.fatihbozik.licencegenerator.util.Utils;
+import io.github.fatihbozik.licensegenerator.LicenseGeneratorBundle;
+import io.github.fatihbozik.licensegenerator.command.CreateFileCommandAction;
+import io.github.fatihbozik.licensegenerator.license.LicenseType;
+import io.github.fatihbozik.licensegenerator.util.Constants;
+import io.github.fatihbozik.licensegenerator.util.Utils;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Creates new licence file or returns existing one.
+ * Creates new license file or returns existing one.
  *
  * @author Fatih Bozik
  */
-public class NewLicenceFileAction extends AnAction implements DumbAware {
-    private final LicenceType licenceType;
+public class NewLicenseFileAction extends AnAction implements DumbAware {
+    private final LicenseType licenseType;
 
-    NewLicenceFileAction(@NotNull LicenceType licenceType) {
-        this.licenceType = licenceType;
-        createPresentation(licenceType);
+    NewLicenseFileAction(@NotNull LicenseType licenseType) {
+        this.licenseType = licenseType;
+        createPresentation(licenseType);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class NewLicenceFileAction extends AnAction implements DumbAware {
             return;
         }
 
-        final PsiFile file = directory.findFile(Constants.LICENCE);
+        final PsiFile file = directory.findFile(Constants.LICENSE);
         final VirtualFile virtualFile = getVirtualFile(directory, file);
 
         if (file == null && virtualFile == null) {
@@ -49,33 +49,33 @@ public class NewLicenceFileAction extends AnAction implements DumbAware {
             }
         } else {
             Notifications.Bus.notify(new Notification(
-                "Licence File Detector",
-                LicenceGeneratorBundle.message("action.licenceFile.exists"),
-                LicenceGeneratorBundle.message("action.licenceFile.exists.in", virtualFile.getPath()),
+                "License File Detector",
+                LicenseGeneratorBundle.message("action.licenseFile.exists"),
+                LicenseGeneratorBundle.message("action.licenseFile.exists.in", virtualFile.getPath()),
                 NotificationType.INFORMATION
             ), project);
         }
     }
 
     private PsiFile createFile(Project project, PsiDirectory directory) {
-        final CreateFileCommandAction createFileCommandAction = new CreateFileCommandAction(project, directory, licenceType);
+        final CreateFileCommandAction createFileCommandAction = new CreateFileCommandAction(project, directory, licenseType);
         return createFileCommandAction.execute();
     }
 
     private VirtualFile getVirtualFile(PsiDirectory directory, PsiFile file) {
         if (file == null) {
-            return directory.getVirtualFile().findChild(Constants.LICENCE);
+            return directory.getVirtualFile().findChild(Constants.LICENSE);
         }
         return file.getVirtualFile();
     }
 
-    private void createPresentation(@NotNull LicenceType licenceType) {
+    private void createPresentation(@NotNull LicenseType licenseType) {
         final Presentation templatePresentation = getTemplatePresentation();
-        templatePresentation.setText(licenceType.getName());
-        templatePresentation.setDescription(getLicenceTypeDescription(licenceType));
+        templatePresentation.setText(licenseType.getName());
+        templatePresentation.setDescription(getLicenseTypeDescription(licenseType));
     }
 
-    private String getLicenceTypeDescription(@NotNull LicenceType licenceType) {
-        return LicenceGeneratorBundle.message("action.licenceFile.description", licenceType.getName());
+    private String getLicenseTypeDescription(@NotNull LicenseType licenseType) {
+        return LicenseGeneratorBundle.message("action.licenseFile.description", licenseType.getName());
     }
 }

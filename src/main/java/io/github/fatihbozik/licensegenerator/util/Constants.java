@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.util;
+package io.github.fatihbozik.licensegenerator.util;
 
 /**
  * {@link Constants} class that holds constants.
@@ -6,8 +6,8 @@ package io.github.fatihbozik.licencegenerator.util;
  * @author Fatih Bozik
  */
 public final class Constants {
-    /** Licence file name **/
-    public static final String LICENCE = "LICENCE";
+    /** License file name **/
+    public static final String LICENSE = "LICENSE";
 
     /** Private constructor to prevent creating {@link Constants} instance. */
     private Constants() {

@@ -1,54 +1,54 @@
-= Licence Generator IntelliJ Plugin
+= License Generator IntelliJ Plugin
 
 // Attributes
 :imagesdir: src/main/resources/images
 
-:licence-badge: https://img.shields.io/github/license/fatihbozik/licence-generator-intellij-plugin
-:licence-file: https://github.com/FatihBozik/licence-generator-intellij-plugin/blob/master/LICENCE.adoc
+:license-badge: https://img.shields.io/github/license/fatihbozik/license-generator-intellij-plugin
+:license-file: https://github.com/FatihBozik/license-generator-intellij-plugin/blob/master/LICENSE.adoc
 
-:version-badge: https://img.shields.io/jetbrains/plugin/v/13305-licence-generator
-:plugin-page: https://plugins.jetbrains.com/plugin/13305-licence-generator/
+:version-badge: https://img.shields.io/jetbrains/plugin/v/13307-license-generator
+:plugin-page: https://plugins.jetbrains.com/plugin/13307-license-generator/
 
-:github-release: https://github.com/FatihBozik/licence-generator-intellij-plugin/releases/tag/
+:github-release: https://github.com/FatihBozik/license-generator-intellij-plugin/releases/tag/
 
-image:{licence-badge}[Licence, {licence-file}]
+image:{license-badge}[License,{license-file}]
 
-image:{version-badge}[Version, link={plugin-page}]
+image:{version-badge}[Version,link={plugin-page}]
 
 == Introduction
 
-**Licence Generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
+**License Generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
 
 It supports following Jetbrains IDEs:
 
 * Android Studio, CLion, DataGrip, GoLand, IntelliJ IDEA Ultimate, IntelliJ IDEA Community, IntelliJ IDEA Educational, MPS, AppCode, PhpStorm, PyCharm Professional, PyCharm Community, PyCharm Educational, Rider, RubyMine, WebStorm
 
-Supported licences:
+Supported licenses:
 
-* Apache Licence 2.0, GNU General Public License v3.0, MIT Licence
+* Apache License 2.0, GNU General Public License v3.0, MIT License
 
 == Installation
 
 * Using IDE built-in plugin system:
 
-- `Preferences` > `Plugins` > `Marketplace` > `Search for "Licence Generator"` > `Install Plugin`
+- `Preferences` > `Plugins` > `Marketplace` > `Search for "License Generator"` > `Install Plugin`
 - Restart IDE.
 
 * Manually:
 
-- Download the https://github.com/FatihBozik/licence-generator-intellij-plugin/releases/latest[latest release] and install it manually using `Preferences` > `Plugins` > `Install plugin from disk...`
+- Download the https://github.com/FatihBozik/license-generator-intellij-plugin/releases/latest[latest release] and install it manually using `Preferences` > `Plugins` > `Install plugin from disk...`
 - Restart IDE.
 
 == Usage
 
-In the *Project* view, right-click a source directory where you want to create the license file and choose *New | Licence File | MIT Licence* from the context menu.
+In the *Project* view, right-click a source directory where you want to create the license file and choose *New | License File | MIT License* from the context menu.
 
 image::preview.png[scaledwidth=30%]
 
 == Changelog
 
 // tag::compact[]
-=== {github-release}v0.0.2[0.0.2] (2019-11-09)
+=== {github-release}v0.0.3[0.0.3] (2019-11-09)
 
 First release
 // end::compact[]

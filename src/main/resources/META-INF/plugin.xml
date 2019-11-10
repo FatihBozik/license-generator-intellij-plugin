@@ -1,10 +1,10 @@
 <idea-plugin>
-    <id>io.github.fatihbozik.intellij-licence-generator</id>
-    <name>Licence Generator</name>
+    <id>io.github.fatihbozik.intellij-license-generator</id>
+    <name>License Generator</name>
     <vendor email="bozikfatih@gmail.com" url="https://fatihbozik.github.io">Fatih Bozik</vendor>
 
     <description><![CDATA[
-    Open Source Licence generator plugin for IntelliJ Idea
+    Open Source License generator plugin for IntelliJ Idea
     ]]></description>
 
     <depends>com.intellij.modules.lang</depends>
@@ -14,7 +14,7 @@
     </extensions>
 
     <actions>
-        <action id="Licence.New" class="io.github.fatihbozik.licencegenerator.actions.NewLicenceFileGroupAction">
+        <action id="License.New" class="io.github.fatihbozik.licensegenerator.actions.NewLicenseFileGroupAction">
             <add-to-group group-id="NewGroup" anchor="last"/>
         </action>
     </actions>

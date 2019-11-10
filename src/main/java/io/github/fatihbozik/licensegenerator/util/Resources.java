@@ -1,7 +1,7 @@
-package io.github.fatihbozik.licencegenerator.util;
+package io.github.fatihbozik.licensegenerator.util;
 
-import io.github.fatihbozik.licencegenerator.licence.Licence;
-import io.github.fatihbozik.licencegenerator.licence.LicenceType;
+import io.github.fatihbozik.licensegenerator.license.License;
+import io.github.fatihbozik.licensegenerator.license.LicenseType;
 import io.netty.util.internal.StringUtil;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
@@ -19,32 +19,32 @@ import java.util.Scanner;
  */
 public final class Resources {
 
-    /** Path to the licence files */
+    /** Path to the license files */
     @NonNls
-    private static final String LICENCES = "/licences/";
+    private static final String LICENSES = "/licenses/";
 
     /** Private constructor to prevent creating {@link Resources} instance. */
     private Resources() {
     }
 
     /**
-     * Returns licence by type.
+     * Returns license by type.
      *
-     * @return Licences list
+     * @return Licenses list
      */
     @NotNull
-    public static Licence getLicence(@NotNull LicenceType type) {
-        final String path = LICENCES.concat(type.getKey());
+    public static License getLicense(@NotNull LicenseType type) {
+        final String path = LICENSES.concat(type.getKey());
         File file = getResource(path);
         if (file != null) {
             String content = getResourceContent(path);
-            return new Licence(type, content);
+            return new License(type, content);
         }
-        return new Licence(type, StringUtil.EMPTY_STRING);
+        return new License(type, StringUtil.EMPTY_STRING);
     }
 
     /**
-     * Returns licences directory.
+     * Returns licenses directory.
      *
      * @return Resources directory
      */

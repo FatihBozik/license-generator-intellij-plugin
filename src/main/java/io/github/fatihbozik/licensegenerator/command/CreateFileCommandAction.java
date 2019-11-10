@@ -1,10 +1,10 @@
-package io.github.fatihbozik.licencegenerator.command;
+package io.github.fatihbozik.licensegenerator.command;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
-import io.github.fatihbozik.licencegenerator.licence.LicenceFactory;
-import io.github.fatihbozik.licencegenerator.licence.LicenceType;
+import io.github.fatihbozik.licensegenerator.license.LicenseFactory;
+import io.github.fatihbozik.licensegenerator.license.LicenseType;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -16,34 +16,34 @@ public class CreateFileCommandAction extends AbstractCommandAction<PsiFile> {
     /** Working directory. */
     private final PsiDirectory directory;
 
-    /** Working licence type. */
-    private final LicenceType licenceType;
+    /** Working license type. */
+    private final LicenseType licenseType;
 
     /**
      * Builds a new instance of {@link CreateFileCommandAction}.
      *
      * @param project     current project
      * @param directory   working directory
-     * @param licenceType working licence type
+     * @param licenseType working license type
      */
     public CreateFileCommandAction(@NotNull Project project,
                                    @NotNull PsiDirectory directory,
-                                   @NotNull LicenceType licenceType) {
+                                   @NotNull LicenseType licenseType) {
         super(project);
         this.directory = directory;
-        this.licenceType = licenceType;
+        this.licenseType = licenseType;
     }
 
     /**
      * Creates a new file using
-     * {@link LicenceFactory#createFromTemplate(PsiDirectory)}
+     * {@link LicenseFactory#createFromTemplate(PsiDirectory)}
      * to fill it with content.
      *
      * @return created file
      */
     @Override
     protected PsiFile compute() {
-        final LicenceFactory factory = new LicenceFactory(licenceType);
+        final LicenseFactory factory = new LicenseFactory(licenseType);
         return factory.createFromTemplate(directory);
     }
 }

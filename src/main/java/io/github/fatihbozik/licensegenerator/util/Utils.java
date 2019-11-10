@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.util;
+package io.github.fatihbozik.licensegenerator.util;
 
 import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;

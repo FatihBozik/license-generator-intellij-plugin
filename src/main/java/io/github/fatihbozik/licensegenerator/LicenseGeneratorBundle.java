@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator;
+package io.github.fatihbozik.licensegenerator;
 
 import com.intellij.CommonBundle;
 import org.jetbrains.annotations.NonNls;
@@ -12,10 +12,10 @@ import java.util.ResourceBundle;
  *
  * @author Fatih Bozik
  */
-public final class LicenceGeneratorBundle {
+public final class LicenseGeneratorBundle {
     /** The {@link ResourceBundle} path. */
     @NonNls
-    private static final String BUNDLE_NAME = "messages.LicenceGeneratorBundle";
+    private static final String BUNDLE_NAME = "messages.LicenseGeneratorBundle";
 
     /** The {@link ResourceBundle} instance. */
     @NotNull
@@ -33,7 +33,7 @@ public final class LicenceGeneratorBundle {
         return CommonBundle.message(BUNDLE, key, params);
     }
 
-    /** {@link LicenceGeneratorBundle} is a non-instantiable static class. */
-    private LicenceGeneratorBundle() {
+    /** {@link LicenseGeneratorBundle} is a non-instantiable static class. */
+    private LicenseGeneratorBundle() {
     }
 }

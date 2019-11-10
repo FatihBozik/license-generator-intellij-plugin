@@ -1,4 +1,4 @@
-package io.github.fatihbozik.licencegenerator.util;
+package io.github.fatihbozik.licensegenerator.util;
 
 import com.intellij.openapi.util.IconLoader;
 
@@ -11,7 +11,7 @@ import javax.swing.Icon;
  */
 public final class Icons {
     /** General ignore icon. */
-    public static final Icon LICENCE = IconLoader.getIcon("/icons/licence.png");
+    public static final Icon LICENSE = IconLoader.getIcon("/icons/license.png");
 
     /** Private constructor to prevent creating {@link Icons} instance. */
     private Icons() {
