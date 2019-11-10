@@ -48,7 +48,7 @@ image::preview.png[scaledwidth=30%]
 == Changelog
 
 // tag::compact[]
-=== {github-release}v0.0.3[0.0.3] (2019-11-09)
+=== {github-release}v0.0.4[0.0.4] (2019-11-09)
 
 First release
 // end::compact[]
