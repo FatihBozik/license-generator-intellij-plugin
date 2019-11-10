@@ -17,7 +17,7 @@ image:{version-badge}[Version, link={plugin-page}]
 
 == Introduction
 
-**licence-generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
+**Licence Generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
 
 It supports following Jetbrains IDEs:
 
@@ -58,7 +58,7 @@ First release
 === License Agreement
 
 By contributing changes to this repository, you agree to license your contributions under the MIT license.
-This ensures your contributions have the same license as the project and that the community is free to use your contributions.
+This ensures your contributions have the same license as the project.
 You also assert that you are the original author of the work that you are contributing unless otherwise stated.
 
 === Local Build
