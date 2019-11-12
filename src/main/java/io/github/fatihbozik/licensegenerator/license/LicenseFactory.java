@@ -51,20 +51,15 @@ public class LicenseFactory implements FileTemplateGroupDescriptorFactory {
 
         final License license = Resources.getLicense(licenseType);
         String content = StringUtil.defaultIfBlank(license.getContent(), "");
-
-        if (license.getType() == LicenseType.MIT) {
-            content = replaceParametricValues(content);
-        }
+        content = replaceParametricValues(content);
 
         final PsiFile file = factory.createFileFromText(Constants.LICENSE, UnknownFileType.INSTANCE, content);
         return (PsiFile) directory.add(file);
     }
 
     private String replaceParametricValues(String content) {
-        final int year = Year.now().getValue();
-        content = content.replace("[year]", String.valueOf(year));
-        final String userName = System.getProperty("user.name");
-        content = content.replace("[fullname]", userName);
+        content = content.replace("[year]", String.valueOf(Year.now().getValue()));
+        content = content.replace("[fullname]", System.getProperty("user.name"));
         return content;
     }
 }
