@@ -29,6 +29,10 @@ patchPluginXml {
       """
 }
 
+publishPlugin {
+    token = System.getenv("LICENSE_GENERATOR_intellijPublishToken")
+}
+
 checkstyle {
     toolVersion '8.26'
 }
