@@ -48,6 +48,9 @@ image::preview.png[scaledwidth=30%]
 == Changelog
 
 // tag::compact[]
+=== {github-release}v0.0.6[0.0.6] (2019-11-30)
+Compatibility with 2019.3
+
 === {github-release}v0.0.5[0.0.5] (2019-11-13)
 
 Replace year and name of the author parameters when creating Apache License 2.0 or GNU General Public License file.

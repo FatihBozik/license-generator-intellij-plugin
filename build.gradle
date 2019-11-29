@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.5'
+version '0.0.6'
 
 sourceCompatibility = 1.8
 
@@ -18,12 +18,11 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.2.3'
+    version '2019.3'
 }
 patchPluginXml {
     changeNotes """
-      Replace year and fullname parameters when creating <br>
-      Apache License 2.0 or GNU General Public License file.
+      Compatibility with 2019.3
       """
 }
 
