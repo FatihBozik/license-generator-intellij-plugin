@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.6'
+version '0.0.7'
 
 sourceCompatibility = 1.8
 
@@ -22,7 +22,18 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Compatibility with 2019.3
+      Support another licence types<br>
+      <ul>
+        <li>BSD 2-Clause "Simplified" License</li>
+        <li>BSD 3-Clause "New" or "Revised" License</li>
+        <li>Eclipse Public License 2.0</li>
+        <li>GNU Affero General Public License v3.0</li>
+        <li>GNU General Public License v2.0</li>
+        <li>GNU Lesser General Public License v2.1</li>
+        <li>GNU Lesser General Public License v3.0</li>
+        <li>Mozilla Public License 2.0</li>
+        <li>The Unlicense</li>
+      </ul>  
       """
 }
 

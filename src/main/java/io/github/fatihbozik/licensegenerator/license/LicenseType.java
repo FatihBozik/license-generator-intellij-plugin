@@ -8,9 +8,18 @@ import org.jetbrains.annotations.NotNull;
  * @author Fatih Bozik
  */
 public enum LicenseType {
-    APACHE("apache-2.0", "Apache License 2.0"),
-    GNU("gpl-2.0", "GNU General Public License v3.0"),
-    MIT("mit", "MIT License");
+    APGL_30("apgl-3.0", "GNU Affero General Public License v3.0"),
+    APACHE_20("apache-2.0", "Apache License 2.0"),
+    BSD_2_CLAUSE("bsd-2-clause", "BSD 2-Clause \"Simplified\" License"),
+    BSD_3_CLAUSE("bsd-3-clause", "BSD 3-Clause \"New\" or \"Revised\" License"),
+    EPL_20("epl-2.0", "Eclipse Public License 2.0"),
+    GPL_20("gpl-2.0", "GNU General Public License v2.0"),
+    GPL_30("gpl-3.0", "GNU General Public License v3.0"),
+    LGPL_21("lgpl-2.1", "GNU Lesser General Public License v2.1"),
+    LGPL_30("lgpl-3.0", "GNU Lesser General Public License v3.0"),
+    MIT("mit", "MIT License"),
+    MPL_20("mpl-2.0", "Mozilla Public License 2.0"),
+    THE_UNLICENSE("unlicense", "The Unlicense");
 
     /** License type key **/
     @NotNull
