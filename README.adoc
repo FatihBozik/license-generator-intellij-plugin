@@ -21,22 +21,49 @@ image:{version-badge}[Version,link={plugin-page}]
 
 It supports following Jetbrains IDEs:
 
-* Android Studio, CLion, DataGrip, GoLand, IntelliJ IDEA Ultimate, IntelliJ IDEA Community, IntelliJ IDEA Educational, MPS, AppCode, PhpStorm, PyCharm Professional, PyCharm Community, PyCharm Educational, Rider, RubyMine, WebStorm
+// Raw html was used because of Github leaves extra space
+// when rendering AsciiDoc lists
+++++
+<ul>
+<li>Android Studio,</li>
+<li>CLion,</li>
+<li>DataGrip,</li>
+<li>GoLand,</li>
+<li>IntelliJ IDEA Ultimate,</li>
+<li>IntelliJ IDEA Community,</li>
+<li>IntelliJ IDEA Educational,</li>
+<li>MPS,</li>
+<li>AppCode,</li>
+<li>PhpStorm,</li>
+<li>PyCharm Professional,</li>
+<li>PyCharm Community,</li>
+<li>PyCharm Educational,</li>
+<li>Rider,</li>
+<li>RubyMine,</li>
+<li>WebStorm</li>
+</ul>
+++++
 
 Supported licenses:
 
-* GNU Affero General Public License v3.0
-* Apache License 2.0,
-* BSD 2-Clause "Simplified" License
-* BSD 3-Clause "New" or "Revised" License
-* Eclipse Public License 2.0
-* GNU General Public License v2.0
-* GNU General Public License v3.0,
-* GNU Lesser General Public License v2.1
-* GNU Lesser General Public License v3.0
-* Mozilla Public License 2.0
-* MIT License
-* The Unlicense
+// Raw html was used because of Github leaves extra space
+// when rendering AsciiDoc lists
+++++
+<ul>
+<li>GNU Affero General Public License v3.0,</li>
+<li>Apache License 2.0,</li>
+<li>BSD 2-Clause "Simplified" License,</li>
+<li>BSD 3-Clause "New" or "Revised" License,</li>
+<li>Eclipse Public License 2.0,</li>
+<li>GNU General Public License v2.0,</li>
+<li>GNU General Public License v3.0,</li>
+<li>GNU Lesser General Public License v2.1,</li>
+<li>GNU Lesser General Public License v3.0,</li>
+<li>Mozilla Public License 2.0,</li>
+<li>MIT License,</li>
+<li>The Unlicense</li>
+</ul>
+++++
 
 == Installation
 
