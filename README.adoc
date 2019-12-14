@@ -7,13 +7,12 @@
 :license-file: https://github.com/FatihBozik/license-generator-intellij-plugin/blob/master/LICENSE.adoc
 
 :version-badge: https://img.shields.io/jetbrains/plugin/v/13307-license-generator
+:downloads-badge: https://img.shields.io/jetbrains/plugin/d/13307-license-generator
 :plugin-page: https://plugins.jetbrains.com/plugin/13307-license-generator/
 
 :github-release: https://github.com/FatihBozik/license-generator-intellij-plugin/releases/tag/
 
-image:{license-badge}[License,{license-file}]
-
-image:{version-badge}[Version,link={plugin-page}]
+image:{license-badge}[License,{license-file}] image:{version-badge}[Version,link={plugin-page}] image:{downloads-badge}[link={plugin-page}]
 
 == Introduction
 
