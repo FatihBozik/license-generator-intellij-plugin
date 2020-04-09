@@ -1,6 +1,6 @@
 package io.github.fatihbozik.licensegenerator;
 
-import com.intellij.CommonBundle;
+import com.intellij.AbstractBundle;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.PropertyKey;
@@ -30,7 +30,7 @@ public final class LicenseGeneratorBundle {
      */
     @NotNull
     public static String message(@NotNull @PropertyKey(resourceBundle = BUNDLE_NAME) String key, Object... params) {
-        return CommonBundle.message(BUNDLE, key, params);
+        return AbstractBundle.message(BUNDLE, key, params);
     }
 
     /** {@link LicenseGeneratorBundle} is a non-instantiable static class. */
