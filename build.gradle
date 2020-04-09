@@ -1,10 +1,10 @@
 plugins {
-    id 'org.jetbrains.intellij' version '0.4.10'
+    id 'org.jetbrains.intellij' version '0.4.17'
     id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
-version '0.0.7'
+version '0.0.8'
 
 sourceCompatibility = 1.8
 
@@ -18,22 +18,11 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.3'
+    version '2020.1'
 }
 patchPluginXml {
     changeNotes """
-      Support another licence types<br>
-      <ul>
-        <li>BSD 2-Clause "Simplified" License</li>
-        <li>BSD 3-Clause "New" or "Revised" License</li>
-        <li>Eclipse Public License 2.0</li>
-        <li>GNU Affero General Public License v3.0</li>
-        <li>GNU General Public License v2.0</li>
-        <li>GNU Lesser General Public License v2.1</li>
-        <li>GNU Lesser General Public License v3.0</li>
-        <li>Mozilla Public License 2.0</li>
-        <li>The Unlicense</li>
-      </ul>  
+      Compatibility with 2020.1
       """
 }
 
@@ -42,7 +31,7 @@ publishPlugin {
 }
 
 checkstyle {
-    toolVersion '8.26'
+    toolVersion '8.30'
 }
 
 checkstyleMain.source = sourceSets.main.allSource
