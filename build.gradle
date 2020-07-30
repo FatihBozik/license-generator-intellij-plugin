@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.8'
+version '0.0.9'
 
 sourceCompatibility = 1.8
 
@@ -18,11 +18,11 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.1'
+    version '2020.2'
 }
 patchPluginXml {
     changeNotes """
-      Compatibility with 2020.1
+      Compatibility with 2020.2
       """
 }
 
