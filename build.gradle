@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.9'
+version '0.0.10'
 
 sourceCompatibility = 1.8
 
@@ -18,11 +18,12 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.2'
+    version System.getenv("IDEA_VERSION")
+    println "Building for IntelliJ version: ${version}"
 }
 patchPluginXml {
     changeNotes """
-      Compatibility with 2020.2
+      Fix java.lang.NoClassDefFoundError
       """
 }
 

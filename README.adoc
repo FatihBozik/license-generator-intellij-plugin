@@ -84,6 +84,9 @@ image::preview.png[scaledwidth=30%]
 
 == Changelog
 
+=== {github-release}v0.0.10[0.0.10] (2020-09-14)
+java.lang.NoClassDefFoundError: com/github/hypfvieh/util/StringUtil
+
 === {github-release}v0.0.9[0.0.9] (2020-07-30)
 Compatibility with 2020.2
 

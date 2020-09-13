@@ -1,6 +1,5 @@
 package io.github.fatihbozik.licensegenerator.license;
 
-import com.github.hypfvieh.util.StringUtil;
 import com.intellij.ide.fileTemplates.FileTemplateGroupDescriptor;
 import com.intellij.ide.fileTemplates.FileTemplateGroupDescriptorFactory;
 import com.intellij.openapi.fileTypes.UnknownFileType;
@@ -10,6 +9,7 @@ import com.intellij.psi.PsiFileFactory;
 import com.intellij.util.IncorrectOperationException;
 import io.github.fatihbozik.licensegenerator.util.Constants;
 import io.github.fatihbozik.licensegenerator.util.Resources;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 
 import java.time.Year;
@@ -50,7 +50,7 @@ public class LicenseFactory implements FileTemplateGroupDescriptorFactory {
         final PsiFileFactory factory = PsiFileFactory.getInstance(directory.getProject());
 
         final License license = Resources.getLicense(licenseType);
-        String content = StringUtil.defaultIfBlank(license.getContent(), "");
+        String content = StringUtils.defaultIfBlank(license.getContent(), "");
         content = replaceParametricValues(content);
 
         final PsiFile file = factory.createFileFromText(Constants.LICENSE, UnknownFileType.INSTANCE, content);
