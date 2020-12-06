@@ -4,9 +4,9 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.10'
+version '0.0.11'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -23,7 +23,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Fix java.lang.NoClassDefFoundError
+      Compatibility with 2020.3
       """
 }
 
