@@ -20,7 +20,7 @@ image:{license-badge}[License,{license-file}] image:{version-badge}[Version,link
 
 It supports following Jetbrains IDEs:
 
-// Raw html was used because of Github leaves extra space
+// Raw html was used because of GitHub leaves extra space
 // when rendering AsciiDoc lists
 ++++
 <ul>
@@ -45,14 +45,16 @@ It supports following Jetbrains IDEs:
 
 Supported licenses:
 
-// Raw html was used because of Github leaves extra space
+// Raw html was used because of GitHub leaves extra space
 // when rendering AsciiDoc lists
 ++++
 <ul>
+<li>Academic Free License v3.0,</li>
 <li>GNU Affero General Public License v3.0,</li>
 <li>Apache License 2.0,</li>
 <li>BSD 2-Clause "Simplified" License,</li>
 <li>BSD 3-Clause "New" or "Revised" License,</li>
+<li>Common Development and Distribution License v1.0,</li>
 <li>Eclipse Public License 2.0,</li>
 <li>GNU General Public License v2.0,</li>
 <li>GNU General Public License v3.0,</li>
