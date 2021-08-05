@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.13'
+version '0.0.14'
 
 sourceCompatibility = 11
 
@@ -23,9 +23,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add more licenses
-      - Academic Free License v3.0
-      - Common Development and Distribution License v1.0
+      Compatibility with 2021.2
       """
 }
 
