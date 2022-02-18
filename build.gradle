@@ -4,26 +4,26 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.14'
+version '0.0.15'
 
-sourceCompatibility = 11
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version System.getenv("IDEA_VERSION")
+    version = System.getenv("IDEA_VERSION")
     println "Building for IntelliJ version: ${version}"
 }
 patchPluginXml {
-    changeNotes """
-      Compatibility with 2021.2
+    changeNotes = """
+      Compatibility with 2021.3.2
       """
 }
 
@@ -32,7 +32,7 @@ publishPlugin {
 }
 
 checkstyle {
-    toolVersion '8.30'
+    toolVersion = '8.30'
 }
 
 checkstyleMain.source = sourceSets.main.allSource
