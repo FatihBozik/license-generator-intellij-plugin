@@ -1,10 +1,10 @@
 plugins {
-    id 'org.jetbrains.intellij' version '0.4.17'
+    id 'org.jetbrains.intellij' version '1.5.2'
     id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
-version '0.0.15'
+version '0.0.16'
 
 sourceCompatibility = JavaVersion.VERSION_11
 
@@ -23,7 +23,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
-      Compatibility with 2021.3.2
+      Compatibility with 2022.1.1
       """
 }
 
