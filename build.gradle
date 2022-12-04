@@ -1,12 +1,12 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.5.2'
+    id 'org.jetbrains.intellij' version '1.10.0'
     id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
 version '0.0.16'
 
-sourceCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -18,12 +18,12 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = System.getenv("IDEA_VERSION")
+    version = "2022.3"
     println "Building for IntelliJ version: ${version}"
 }
 patchPluginXml {
     changeNotes = """
-      Compatibility with 2022.1.1
+      Compatibility with 2022.3
       """
 }
 
