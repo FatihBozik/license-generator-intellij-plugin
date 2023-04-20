@@ -86,6 +86,9 @@ image::preview.png[scaledwidth=30%]
 
 == Changelog
 
+=== {github-release}v0.0.17[0.0.17] (2023-04-20)
+Compatibility with 2023.1
+
 === {github-release}v0.0.16[0.0.16] (2022-08-06)
 Compatibility with 2022.1.1
 
