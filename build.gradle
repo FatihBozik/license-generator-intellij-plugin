@@ -1,19 +1,19 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.5.2'
+    id 'org.jetbrains.intellij' version '1.13.3'
     id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
-version '0.0.16'
+version '0.0.17'
 
-sourceCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'junit:junit:4.13.1'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -23,7 +23,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
-      Compatibility with 2022.1.1
+      Compatibility with 2023.1
       """
 }
 
