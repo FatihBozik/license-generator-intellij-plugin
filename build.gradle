@@ -1,12 +1,14 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.13.3'
+    id 'org.jetbrains.intellij' version '1.17.0'
     id 'checkstyle'
 }
 
 group 'io.github.fatihbozik'
-version '0.0.17'
+version '0.0.18'
 
-sourceCompatibility = JavaVersion.VERSION_17
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
@@ -23,7 +25,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
-      Compatibility with 2023.1
+      Compatibility with 2023.3
       """
 }
 
