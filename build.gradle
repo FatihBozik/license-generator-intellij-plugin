@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.fatihbozik'
-version '0.0.20'
+version '0.0.21'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -25,7 +25,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
-      Compatibility with 2024.2
+      Compatibility with 2024.3
       """
 }
 
