@@ -9,6 +9,8 @@
 
     <depends>com.intellij.modules.lang</depends>
 
+    <idea-version since-build="221.0"/>
+
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
