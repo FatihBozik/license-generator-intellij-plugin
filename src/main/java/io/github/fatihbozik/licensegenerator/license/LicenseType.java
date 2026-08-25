@@ -21,6 +21,7 @@ public enum LicenseType {
     LGPL_30("lgpl-3.0", "GNU Lesser General Public License v3.0"),
     MIT("mit", "MIT License"),
     MPL_20("mpl-2.0", "Mozilla Public License 2.0"),
+    OSL_30("osl-3.0", "Open Software License 3.0"),
     THE_UNLICENSE("unlicense", "The Unlicense");
 
     /** License type key **/
