@@ -14,7 +14,7 @@
 
 image:{license-badge}[License,{license-file}] image:{version-badge}[Version,link={plugin-page}] image:{downloads-badge}[link={plugin-page}]
 
-== Introduction
+== Introduction 
 
 **License Generator** is an IntelliJ Idea plugin that allows you to easily add one of your open source licenses to your project.
 
